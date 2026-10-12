@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Campus Event Management</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <header id="navbar"></header>
+
+    <main>
+      <section class="hero">
+        <h1>University of Lahore</h1>
+        <p>
+          Discover seminars, workshops, sports, competitions and student
+          activities.
+        </p>
+        <form id="hero-search" class="search-form">
+          <input
+            type="text"
+            name="q"
+            placeholder="Search events, e.g. AI Workshop"
+          />
+          <button type="submit" class="btn">Search</button>
+        </form>
+        <div class="hero-actions">
+          <a class="btn btn-outline" href="events.html">Browse All Events</a>
+          <a class="btn btn-outline" href="register.html">Create Account</a>
+        </div>
+      </section>
+
+      <section class="container">
+        <h2 class="section-title">Featured Events</h2>
+        <div id="featured" class="cards"></div>
+      </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="src/js/data.js"></script>
+    <script src="src/components/eventCard.js"></script>
+    <script src="src/components/layout.js"></script>
+    <script src="src/pages/home.js"></script>
+  </body>
+</html>
