@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Campus Event Management</title>
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+  <header id="navbar"></header>
+
+  <main class="container">
+    <h1 class="section-title">All Events</h1>
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Search by title, location or keyword">
+      <select id="category" aria-label="Filter by category"></select>
+    </div>
+    <p id="result-count" class="result-count"></p>
+    <div id="events" class="cards" style="margin-top: 1rem;"></div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script src="src/js/data.js"></script>
+  <script src="src/components/eventCard.js"></script>
+  <script src="src/components/layout.js"></script>
+  <script src="src/pages/events.js"></script>
+</body>
+</html>

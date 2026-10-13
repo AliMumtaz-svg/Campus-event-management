@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Campus Event Management</title>
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+  <header id="navbar"></header>
+
+  <main class="container">
+    <div class="auth-card">
+      <h1>Login</h1>
+      <form id="login-form" novalidate>
+        <label>Email<input type="email" name="email" placeholder="you@uni.edu" autocomplete="email"></label>
+        <label>Password<input type="password" name="password" autocomplete="current-password"></label>
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <p id="message" class="message"></p>
+      <p class="switch">New student? <a href="register.html">Create an account</a></p>
+      <div class="hint">
+        <strong>Demo accounts</strong><br>
+        Admin: admin@uni.edu / admin123<br>
+        Student: student@uni.edu / student123
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script src="src/js/data.js"></script>
+  <script src="src/components/eventCard.js"></script>
+  <script src="src/components/layout.js"></script>
+  <script src="src/pages/login.js"></script>
+</body>
+</html>

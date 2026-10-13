@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Campus Event Management</title>
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+  <header id="navbar"></header>
+
+  <main class="container">
+    <h1 id="welcome" style="margin-bottom: 1.4rem;">Dashboard</h1>
+
+    <!-- Student view -->
+    <section id="student-section" class="panel" hidden>
+      <h2>My Registrations</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Event</th><th>Date &amp; Time</th><th>Location</th><th>Registered On</th></tr></thead>
+          <tbody id="my-registrations"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Admin view: event management (create / view / update / delete) -->
+    <section id="admin-section" class="panel" hidden>
+      <h2>Event Management</h2>
+      <form id="event-form" class="form-grid" novalidate>
+        <label>Title<input type="text" name="title"></label>
+        <label>Category<select name="category"></select></label>
+        <label>Date<input type="date" name="date"></label>
+        <label>Time<input type="time" name="time"></label>
+        <label>Location<input type="text" name="location"></label>
+        <label>Capacity<input type="number" name="capacity" min="1"></label>
+        <label class="full">Description<textarea name="description" rows="3"></textarea></label>
+        <div class="full form-actions">
+          <button type="submit" class="btn" id="submit-event">Create Event</button>
+          <button type="button" class="btn btn-outline" id="cancel-edit" hidden>Cancel Edit</button>
+        </div>
+      </form>
+      <p id="event-message" class="message"></p>
+
+      <h3 style="margin: 1.6rem 0 0.8rem;">All Events</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Title</th><th>Category</th><th>Date</th><th>Registrations</th><th>Actions</th></tr></thead>
+          <tbody id="admin-events"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script src="src/js/data.js"></script>
+  <script src="src/components/eventCard.js"></script>
+  <script src="src/components/layout.js"></script>
+  <script src="src/pages/dashboard.js"></script>
+</body>
+</html>
